@@ -492,7 +492,7 @@ generateLutHeader()
         }
     }
 
-    if (IlmThread::supportsThreads()) {
+    if (false && IlmThread::supportsThreads()) {
         std::vector<LutHeaderWorker::Runner*> runners;
         for (size_t i=0; i<workers.size(); ++i) {
             runners.push_back( new LutHeaderWorker::Runner(*workers[i], (i==0)) );
